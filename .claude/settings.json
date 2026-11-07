@@ -25,8 +25,19 @@
       "Bash(git push --force:*)",
       "Bash(git push -f:*)",
       "Bash(git reset --hard:*)",
-      "Bash(npm audit fix --force:*)"
+      "Bash(npm audit fix --force:*)",
+      "Bash(npx submit-expo-feedback:*)",
+      "Bash(npx --yes submit-expo-feedback:*)",
+      "Bash(npx -y submit-expo-feedback:*)"
     ]
+  },
+  "env": {
+    "EXPO_SKILLS_TELEMETRY": "0",
+    "ENABLE_CODE_SECURITY_REVIEW": "0"
+  },
+  "enabledPlugins": {
+    "expo@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true
   },
   "hooks": {
     "PreToolUse": [
