@@ -51,7 +51,8 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "audit": "npm audit --audit-level=high",
-    "check": "npm run typecheck && npm run lint && npm run format:check && npm test -- --ci"
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm test -- --ci",
+    "audit:context": "node .claude/skills/token-manager/scripts/context-audit.mjs"
   },
   "private": true,
   "jest": {

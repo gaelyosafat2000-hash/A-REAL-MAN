@@ -37,3 +37,8 @@ Las reglas generales de Expo están en @AGENTS.md. Aquí solo va lo propio de Li
 
 - Nunca leas ni edites `.env*` (excepto `.env.example`). Secretos solo vía variables de entorno.
 - Solo `EXPO_PUBLIC_*` llega al cliente: jamás pongas ahí claves de servicio.
+
+## Skills y agentes
+
+- Skills en `.claude/skills/` (se cargan solo al usarlas). Agentes en `.claude/agents/`: solo para tareas de varios pasos; lo simple se hace directamente.
+- Tras añadir o cambiar una skill, agente o este archivo → `npm run audit:context`.
