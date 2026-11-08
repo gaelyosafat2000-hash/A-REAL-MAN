@@ -1,0 +1,36 @@
+# Actualizaciones automáticas de dependencias.
+# Los paquetes del SDK de Expo NO se actualizan aquí: deben moverse juntos con
+# `npx expo install --fix` (o la skill expo:expo-upgrade) para no romper la compatibilidad.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      herramientas-dev:
+        dependency-type: development
+        update-types: [minor, patch]
+    ignore:
+      - dependency-name: expo
+      - dependency-name: 'expo-*'
+      - dependency-name: '@expo/*'
+      - dependency-name: react
+      - dependency-name: react-dom
+      - dependency-name: react-native
+      - dependency-name: 'react-native-*'
+      - dependency-name: '@types/react'
+      - dependency-name: jest-expo
+      - dependency-name: jest
+      - dependency-name: eslint-config-expo
+      - dependency-name: typescript
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      acciones:
+        patterns: ['*']
